@@ -17,9 +17,7 @@ We traverse each level of the tree from the root downward, and we process the no
  
 
 ---
-
-import sys
-
+    
 class Node:
     def __init__(self,data):
         self.right=self.left=None

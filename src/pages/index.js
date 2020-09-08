@@ -29,18 +29,18 @@ const IndexPage = ({ data }) => (
           <br />
         </Typography>
         <Grid container spacing={2}>
-          {data.allMarkdownRemark.edges.map(post => (
-            <SingleCard
-              key={post.node.id}
-              title={post.node.frontmatter.title}
-              description={post.node.html}
-              path={post.node.frontmatter.path}
-              language={post.node.frontmatter.language}
-              difficulty={post.node.frontmatter.difficulty}
-              img={post.node.frontmatter.img}
-              question={post.node.frontmatter.question}
-            />
-          ))}
+        {data.allMarkdownRemark.edges.map(post => (
+          <SingleCard
+            key={post.node.id}
+            title={post.node.frontmatter.title}
+            description={post.node.html}
+            path={post.node.frontmatter.path}
+            language={post.node.frontmatter.language}
+            difficulty={post.node.frontmatter.difficulty}
+            img={post.node.frontmatter.img}
+            question={post.node.frontmatter.question}
+          />
+        ))}
         </Grid>
       </Grid>
       <Grid item xs={6} sm={4}>
