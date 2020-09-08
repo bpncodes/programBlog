@@ -9,9 +9,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import AltCard from "../components/cardList"
 
-
 const IndexPage = ({ data }) => (
-  <Layout>
+  <Layout classPrefix='ap'>
     <SEO title="Home" />
     <Grid container style={{ background: "#0a192f" }}>
       <Grid item xs={0} sm={2}></Grid>

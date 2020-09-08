@@ -23,7 +23,7 @@ export function App() {
 }
 
 
-const mainTitleCard = makeStyles({
+const useStyles = makeStyles({
   root: {
     maxWidth: "100%",
     margin: "25px auto",
@@ -40,7 +40,7 @@ const mainTitleCard = makeStyles({
 })
 
 export default function MainTitle() {
-  const classes = mainTitleCard()
+  const classes = useStyles()
 
   return (
     <Card className={classes.root}>

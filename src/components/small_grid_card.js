@@ -22,7 +22,7 @@ export function App() {
   );
 }
 
-const smallGridCard = makeStyles({
+const useStyles = makeStyles({
   root: {
     maxWidth: "100%",
     padding: 0,
@@ -39,7 +39,7 @@ const smallGridCard = makeStyles({
 })
 
 export default function SingleCard(props) {
-  const classes = smallGridCard()
+  const classes = useStyles()
 
   return (
     <Grid item xs={12} sm={6} md={4} >

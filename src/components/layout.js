@@ -5,6 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 import { Link } from "gatsby"
+import {JssProvider} from 'react-jss'
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -13,7 +14,14 @@ import ButtonAppBar from "./appbar"
 import Header from "./header"
 import "./layout.css"
 import BottomAppBar from "./bottomapp"
-const Layout = ({ children }) => {
+import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
+
+
+const Layout = ({ children, classPrefix }) => {
+  const generateClassName = createGenerateClassName({
+    productionPrefix: classPrefix,
+  })
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,11 +33,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <ButtonAppBar />
-      <main>{children}</main>
-      <BottomAppBar />
-    </>
+    <JssProvider generateClassName={generateClassName}>
+      <>
+        <ButtonAppBar />
+        <main>{children}</main>
+        <BottomAppBar />
+      </>
+    </JssProvider>
   )
 }
 
