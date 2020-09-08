@@ -37,9 +37,13 @@ module.exports = {
 
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: "gatsby-plugin-material-ui",
+      options: { stylesProvider: { injectFirst: true } },
     },
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: { stylesProvider: { injectFirst: true } },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
