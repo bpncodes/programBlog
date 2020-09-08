@@ -26,6 +26,7 @@ import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
+    textAlign: "left",
   },
   smallmedia: {
     height: "auto",
