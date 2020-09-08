@@ -4,14 +4,13 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  bpns personal programming blog
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is a simple website where I post some interview problems and other programming problems solution in general. I learn and I share my knowledge!
+Check me out[aboutme?](bipinkarki.netlify.com)._
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
-
-## 🚀 Quick start
+## 🚀 Use it for you own project !
 
 1.  **Create a Gatsby site.**
 
