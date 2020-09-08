@@ -14,15 +14,8 @@ import ButtonAppBar from "./appbar"
 import Header from "./header"
 import "./layout.css"
 import BottomAppBar from "./bottomapp"
-import {
-  StylesProvider,
-  createGenerateClassName,
-} from "@material-ui/core/styles"
 
-const Layout = ({ children, classPrefix }) => {
-  const generateClassName = createGenerateClassName({
-    productionPrefix: classPrefix,
-  })
+const Layout = ({ children }) => {
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -37,9 +30,7 @@ const Layout = ({ children, classPrefix }) => {
   return (
     <>
       <ButtonAppBar />
-      <JssProvider generateClassName={generateClassName}>
         <main>{children}</main>
-      </JssProvider>
       <BottomAppBar />
     </>
   )

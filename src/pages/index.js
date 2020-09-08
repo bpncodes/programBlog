@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 import AltCard from "../components/cardList"
 
 const IndexPage = ({ data }) => (
-  <Layout classPrefix='bipin'>
+  <Layout>
     <SEO title="Home" />
     <Grid container style={{ background: "#0a192f" }}>
       <Grid item xs={0} sm={2}></Grid>

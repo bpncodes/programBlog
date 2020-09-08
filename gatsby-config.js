@@ -36,6 +36,9 @@ module.exports = {
     },
 
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
