@@ -31,7 +31,7 @@ export default function SingleCard(props) {
   const classes = useStyles()
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={12} md={6}>
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia className={classes.media} image={props.img} title="card" />
