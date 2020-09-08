@@ -8,7 +8,7 @@
 </h1>
 
 This is a simple website where I post some interview problems and other programming problems solution in general. I learn and I share my knowledge!
-Check me out[aboutme?](bipinkarki.netlify.com)._
+Check me out [findmoreaboutme?](bipinkarki.netlify.com)._
 
 ## 🚀 Use it for you own project !
 
