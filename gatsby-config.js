@@ -21,29 +21,12 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-remove-root-p-tag`,
-            options: {
-              parents: ["default-site-plugin"],
-            },
-          },
-        ],
-      },
-    },
-
+    
     `gatsby-transformer-remark`,
     {
       resolve: "gatsby-plugin-material-ui",
-      options: { stylesProvider: { injectFirst: true } },
     },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: { stylesProvider: { injectFirst: true } },
-    },
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

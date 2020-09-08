@@ -12,6 +12,7 @@ import IconButton from "@material-ui/core/IconButton"
 import Typography from "@material-ui/core/Typography"
 import { red } from "@material-ui/core/colors"
 import FavoriteIcon from "@material-ui/icons/Favorite"
+import { Grid } from "@material-ui/core/"
 import ShareIcon from "@material-ui/icons/Share"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import MoreVertIcon from "@material-ui/icons/MoreVert"
@@ -27,8 +28,11 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
   },
   smallmedia: {
+    height: "auto",
+    maxWidth: "100%",
     margin: "auto",
     paddingTop: "80%",
+    backgroundSize: "contain",
   },
   media: {
     height: 0,
@@ -113,11 +117,20 @@ export default function NewSinglePost(props) {
           {/* <iframe src={props.solution} height="400" width="100%"></iframe> */}
 
           <Typography paragraph>{props.description}</Typography>
-          {props.descriptionImage && <CardMedia
-            className={classes.smallmedia}
-            image={props.descriptionImage}
-            title={props.title}
-          />}
+          <Grid container>
+            <Grid item xs="2" md="4"></Grid>
+            <Grid item xs="8" md="4">
+              {props.descriptionImage && (
+                <CardMedia
+                  className={classes.smallmedia}
+                  image={props.descriptionImage}
+                  title={props.title}
+                  style={{ justify: "space-around" }}
+                />
+              )}
+            </Grid>
+            <Grid item xs="2" md="4"></Grid>
+          </Grid>
         </CardContent>
       </Collapse>
       <CardMedia
