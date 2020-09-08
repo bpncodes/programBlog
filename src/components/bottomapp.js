@@ -26,7 +26,7 @@ export default function BottomAppBar() {
       <Toolbar>
         <Typography style={{ display: "block", margin: "auto", padding: 0 }}>
           <Box textAlign="center" m={1}>
-            {new Date().toJSON().slice(0, 10).replace(/-/g, "/")}
+            last update : {new Date().toJSON().slice(0, 10).replace(/-/g, "/")}
           </Box>
         </Typography>
       </Toolbar>
