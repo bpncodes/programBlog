@@ -8,6 +8,7 @@ import SingleCard from "../components/small_grid_card"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import AltCard from "../components/cardList"
+import { makeStyles } from "@material-ui/core/styles"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -28,7 +29,7 @@ const IndexPage = ({ data }) => (
           </Box>
           <br />
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} style={{display:"Flex"}}>
           {data.allMarkdownRemark.edges.map(post => (
             <SingleCard
               key={post.node.id}
@@ -48,7 +49,7 @@ const IndexPage = ({ data }) => (
 )
 
 export const pageQuery = graphql`
-  query BlogIndexQuery {
+  {
     allMarkdownRemark {
       edges {
         node {
