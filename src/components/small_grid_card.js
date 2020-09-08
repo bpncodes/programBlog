@@ -10,8 +10,19 @@ import Typography from "@material-ui/core/Typography"
 import { Grid, CardHeader } from "@material-ui/core/"
 import { Link } from "gatsby"
 import Box from "@material-ui/core/Box"
+import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'c',
+});
+
+export function App() {
+  return (
+    <StylesProvider generateClassName={generateClassName}>...</StylesProvider>
+  );
+}
+
+const smallGridCard = makeStyles({
   root: {
     maxWidth: "100%",
     padding: 0,
@@ -28,7 +39,7 @@ const useStyles = makeStyles({
 })
 
 export default function SingleCard(props) {
-  const classes = useStyles()
+  const classes = smallGridCard()
 
   return (
     <Grid item xs={12} sm={6} md={4} >

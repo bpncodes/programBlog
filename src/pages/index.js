@@ -9,6 +9,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import AltCard from "../components/cardList"
 
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />

@@ -10,8 +10,20 @@ import Typography from "@material-ui/core/Typography"
 import Image from "./image"
 import { Link } from "gatsby"
 import jpeg from "./main.jpeg"
+import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'd',
+});
+
+export function App() {
+  return (
+    <StylesProvider generateClassName={generateClassName}>...</StylesProvider>
+  );
+}
+
+
+const mainTitleCard = makeStyles({
   root: {
     maxWidth: "100%",
     margin: "25px auto",
@@ -28,7 +40,7 @@ const useStyles = makeStyles({
 })
 
 export default function MainTitle() {
-  const classes = useStyles()
+  const classes = mainTitleCard()
 
   return (
     <Card className={classes.root}>
@@ -36,7 +48,7 @@ export default function MainTitle() {
         <CardMedia
           className={classes.media}
           image= {jpeg}
-          title="Contemplative Reptile"
+          title="book"
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="h2">
