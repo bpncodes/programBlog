@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Image from "./image"
 import { Link } from "gatsby"
+import jpeg from "./main.jpeg"
 
 const useStyles = makeStyles({
   root: {
@@ -34,7 +35,7 @@ export default function MainTitle() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          image= {jpeg}
           title="Contemplative Reptile"
         />
         <CardContent>
