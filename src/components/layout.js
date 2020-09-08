@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 import { Link } from "gatsby"
-import {JssProvider} from 'react-jss'
+import { JssProvider } from "react-jss"
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -14,8 +14,10 @@ import ButtonAppBar from "./appbar"
 import Header from "./header"
 import "./layout.css"
 import BottomAppBar from "./bottomapp"
-import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
-
+import {
+  StylesProvider,
+  createGenerateClassName,
+} from "@material-ui/core/styles"
 
 const Layout = ({ children, classPrefix }) => {
   const generateClassName = createGenerateClassName({
@@ -33,13 +35,13 @@ const Layout = ({ children, classPrefix }) => {
   `)
 
   return (
-    <JssProvider generateClassName={generateClassName}>
-      <>
-        <ButtonAppBar />
+    <>
+      <ButtonAppBar />
+      <JssProvider generateClassName={generateClassName}>
         <main>{children}</main>
-        <BottomAppBar />
-      </>
-    </JssProvider>
+      </JssProvider>
+      <BottomAppBar />
+    </>
   )
 }
 

@@ -10,18 +10,6 @@ import Typography from "@material-ui/core/Typography"
 import Image from "./image"
 import { Link } from "gatsby"
 import jpeg from "./main.jpeg"
-import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
-
-const generateClassName = createGenerateClassName({
-  productionPrefix: 'd',
-});
-
-export function App() {
-  return (
-    <StylesProvider generateClassName={generateClassName}>...</StylesProvider>
-  );
-}
-
 
 const useStyles = makeStyles({
   root: {

@@ -10,17 +10,7 @@ import Typography from "@material-ui/core/Typography"
 import { Grid, CardHeader } from "@material-ui/core/"
 import { Link } from "gatsby"
 import Box from "@material-ui/core/Box"
-import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 
-const generateClassName = createGenerateClassName({
-  productionPrefix: 'c',
-});
-
-export function App() {
-  return (
-    <StylesProvider generateClassName={generateClassName}>...</StylesProvider>
-  );
-}
 
 const useStyles = makeStyles({
   root: {
