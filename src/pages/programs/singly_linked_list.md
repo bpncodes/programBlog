@@ -5,7 +5,7 @@ title: "Singly Linked List"
 author: "Bipin karki"
 language: "Python"
 difficulty: "Easy"
-img: "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+img: "https://images.pexels.com/photos/119562/pexels-photo-119562.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 question: Create a Singly Linked list with a single data object. Create a method to Add  data onto it and then create another method to check and remove the duplicates from that singly linked list. Assume that data are inserted in increasing order ONLY.
 
 Note: From HackerRank.
