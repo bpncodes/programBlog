@@ -50,9 +50,7 @@ class Insert:
             if temp.data in unique:
                 prev.next = temp.next
                 temp = temp.next
-                print('IN UNIQUE')
             else:
-                print("Else")
                 unique.append(temp.data)
                 prev=temp
                 temp= temp.next
