@@ -20,13 +20,15 @@ The structure of singly Linked list is given below:
 
 ---
 
-#For Creating a single node
+
 class Node:
+    '''For Creating a single node'''
     def __init__(self,data):
         self.data = data
         self.next = None
-#For Insert, Printing and checking duplicates
+
 class Insert:
+    '''For Insert, Printing and checking duplicates'''
     def insert_node(self,data,head):
         if head == None:
             return Node(data)
