@@ -26,7 +26,6 @@ class Node:
     def __init__(self,data):
         self.data = data
         self.next = None
-
 class Insert:
     '''For Insert, Printing and checking duplicates'''
     def insert_node(self,data,head):
@@ -58,7 +57,6 @@ class Insert:
                 prev=temp
                 temp= temp.next
         return head
-    
 singly = Insert()
 head = None
 head = singly.insert_node(2,head)
