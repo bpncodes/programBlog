@@ -48,12 +48,10 @@ class Insert:
         prev = None
         while temp!=None:
             if temp.data in unique:
-                prev.next = temp.next
-                temp = temp.next
+                prev.next, temp = temp.next, temp.next
             else:
                 unique.append(temp.data)
-                prev=temp
-                temp= temp.next
+                prev, temp = temp, temp.next
         return head
 singly = Insert()
 head = None
