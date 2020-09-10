@@ -36,7 +36,7 @@ export default function SingleCard(props) {
         <CardActionArea>
           <CardMedia className={classes.media} image={props.img} title="card" />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" noWrap>
               {props.title}
             </Typography>
             <Typography
