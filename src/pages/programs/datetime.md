@@ -5,30 +5,31 @@ title: "Conditional Statements"
 author: "Bipin karki"
 language: "Python"
 difficulty: "Easy"
-img: "https://images.pexels.com/photos/3769714/pexels-photo-3769714.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-question: "A prime is a natural number greater than 1 that has no positive divisors other than  and itself. Given a number, n, determine and print whether it's Prime or Not Prime.
-Try to come up with a O(sqrt(n)) primality algorithm, or see what sort of optimizations you come up with for an O(n) algorithm Else Your algorithm might fail the running time requirements."
+img: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+question: "Your local library needs your help! Given the expected and actual return dates for a library book, create a program that calculates the fine (if any). The fee structure is as follows:
+
+1. If the book is returned on or before the expected return date, no fine will be charged (i.e.fine = 0).
+2. If the book is returned after the expected return day but still within the same calendar month and year as the expected return date, fine = 14 * (number of days late)..
+3. If the book is returned after the expected return month but still within the same calendar year as the expected return date, the fine = 500 * (number of months late).
+4. If the book is returned after the calendar year in which it was expected, there is a fixed fine of 10000."
 Note: "From HackerRank."
-descriptionImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Primes-vs-composites.svg/426px-Primes-vs-composites.svg.png"
-description: " Definition: A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. The first few prime numbers are {2, 3, 5, 7, 11, ….}. And we know that if a number is even > 2 then that can't be a prime number so we have a condition for that. And the second optimization is that we run the program from 3 to square root of the number. Because after the square root the factors repeat in the opposite direction. Hence this method will optimize our code and reduce the time complexity drastically. "
+descriptionImage: ""
+description: " I've used datetime module from python to solve this problem easily. Get input from stdin and use simple if else statements."
 
 ---
 
-import math
-n = int(input()) # Number of Test Cases
-a=[]
-def check(n):
-    if n==2:
-        return "Prime"
-    if n <= 1 or n%2==0:
-        return "Not prime"
-    for i in range(3,1+math.floor(math.sqrt(n))):
-        if n%i == 0:
-            return "Not prime"
-    else:
-        return "Prime"
-for i in range(n): # Test Cases
-    a.append(check(int(input())))
-for i in a: # Printing the results
-    print(i)
+import datetime
+book_returned = list(map(int,(input().strip().split())))  #Get the returned date
+expiring_date = list(map(int,(input().strip().split())))   #Get the expiry date 
+x=datetime.datetime(book_returned[2],book_returned[1],book_returned[0])
+y=datetime.datetime(expiring_date[2],expiring_date[1],expiring_date[0])
+if y>=x:
+    print(0)
+elif(x.month==y.month and x.year == y.year):
+    print(15\*(x-y).days)
+elif(x.year == y.year):
+    print(500\*(x.month-y.month))
+elif(x.year != y.year):
+    print(10000)
+
 
