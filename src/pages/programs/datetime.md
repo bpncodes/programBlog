@@ -21,8 +21,8 @@ description: " I've used datetime module from python to solve this problem easil
 import datetime
 book_returned = list(map(int,(input().strip().split())))  #Get the returned date
 expiring_date = list(map(int,(input().strip().split())))   #Get the expiry date 
-x=datetime.datetime(book_returned[2],book_returned[1],book_returned[0])
-y=datetime.datetime(expiring_date[2],expiring_date[1],expiring_date[0])
+x=datetime.datetime(book_returned\[2\],book_returned\[1\],book_returned\[0\])
+y=datetime.datetime(expiring_date\[2\],expiring_date\[1\],expiring_date\[0\])
 if y>=x:
     print(0)
 elif(x.month==y.month and x.year == y.year):
