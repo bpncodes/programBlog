@@ -1,7 +1,7 @@
 ---
 path: "/bst_bfs"
 date: "September 8, 2020"
-title: "Depth first search"
+title: "Breadth first search"
 author: "Bipin karki"
 language: "Python"
 difficulty: "Easy"
@@ -35,7 +35,7 @@ class Solution:
                 root.right=cur
         return root
     def levelOrder(self,root):
-        '''This function is for depth first search'''
+        '''This function is for breadth first search'''
         queue = []
         queue.append(root)
         while(queue):
