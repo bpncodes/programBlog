@@ -1,7 +1,7 @@
 ---
-path: "/singly_linked_list"
+path: "/singly_linked_list_duplicates"
 date: "September 9, 2020"
-title: "Singly Linked List"
+title: "Singly - Duplicates"
 author: "Bipin karki"
 language: "Python"
 difficulty: "Easy"
