@@ -5,7 +5,7 @@ title: "Singly - Deletions"
 author: "Bipin karki"
 language: "Python"
 difficulty: "Easy"
-img: "https://images.pexels.com/photos/3758105/pexels-photo-3758105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+img: "https://images.pexels.com/photos/316776/pexels-photo-316776.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 question: Create a class with all types of deletions on singly linked list.
 
 Note: Random.
